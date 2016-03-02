@@ -1,6 +1,15 @@
 f = open('input.txt', 'r')
 contents = f.readlines()
+f.close()
+
+f = open('output.txt', 'w')
+
 for x in contents:
-	if len(x) > 10:
-		x = x[0:10]
-		print(x)
+
+	x = x[0:10]
+
+	print(x)
+	
+	f.write(x + '\n')
+
+f.close()
